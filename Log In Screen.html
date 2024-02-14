@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Styles.css" rel="Stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> <!--imported font -->
+    <title>GlowGuide - Log In</title>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="site-name">GlowGuide</div>
+        <nav>
+            <ul>
+                <li><a href=Home%20Screen.html>Home</a></li>
+                <li><a href=About%20Us%20Screen.html>About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<h1>Log in</h1>
+<h2>Create a personalized skincare routine</h2>
+<form class="log-form">
+        <div class="log-form-item">
+            <label> Enter your Email address</label>
+            <br>
+            <input class="input-bar" type="text" name="emailInput" placeholder="example@example.com" required>
+        </div>
+        <div class="log-form-item">
+            <label> Enter your password</label>
+            <br>
+            <input class="input-bar" type="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="log-form-item">
+            <input type="checkbox" name="rememberMeCheck">
+            <label> Remember me </label>
+            <input class="button action-button" id="sign-in" type="submit" value="Sign in">
+        </div>
+        <div class="log-form-item">
+            <p> Don't have an account? <a href=Sign%20Up%20Screen.html> Sign up </a> now! </p>
+        </div>
+</form>
+
+<script src="log-in-form-validation.js"></script>
+</body>
+</html>
