@@ -1,47 +1,67 @@
-# GlowGuide Client-Side Application
+# GlowGuide Client-Server Application
 
-This part of the project is the client-side implementation of the GlowGuide website, which provides personalized
+## Project Overview
+
+This part of the project is the server-side implementation of the GlowGuide website, which provides personalized
 skincare recommendations to users based on the details they provide, as well as links to websites that offer the
 relevant products.
 
-## 1. Creating Pages - HTML
+### Detailed Instructions Implementation:
 
-- Six HTML pages were created to represent different screens of the application.
-- Each page includes a header with a navigation bar for easy navigation across the site.
+1. **Project Folder Structure**
 
-## 2. Designing Pages - CSS
+   The project follows a structured folder organization:
 
-- CSS files were utilized to design the application with responsiveness.
-- CSS animations were incorporated to enhance user experience, such as animations on the main image and navbar titles.
+    - **Components:** Contains shared components like the header.
+    - **Templates:** Holds HTML files, including the base template for the website.
+    - **Static:** Contains subfolders for general CSS and JavaScript files.
+    - **Pages:** Each page has its own folder with static assets, HTML templates, and corresponding Python files.
+      Additional files include `db_connector.py`, `settings.py`, and `app.py`.
 
-## 3. Dynamic Implementation of Website JavaScript
 
-- Eight JavaScript files were created for dynamic functionality, each focusing on specific events or interactions.
-- Event functions were implemented to handle user interactions, such as button clicks, object visibility and search
-  history*.
+2. **Handling Routing Client Requests**
 
-## 4. Implementation of Service Functionality on the Client Side
+   Functions are created to handle client requests, adhering to standard practices taught in class.
 
-- The client-side service functionality includes collecting and validating user inputs through forms.
-- Forms were implemented for various purposes, such as user registration, login, profile updates, and product search.
 
-## 5. General Instructions
+3. **Connection to Database and SQL Queries**
 
-- **Working Assumptions**: Certain assumptions were made to meet project guidelines, clearly specified in the project
-  documentation comments.
+   The project uses a MongoDB database named "mydatabase" with collections for customers and products. SQL queries are
+   executed for screens such as myskincare, login, and signup.
 
-1. *not all required functionality is in the search history event because a connection to a database is required which
-   will happen in step C, but this is the basis for this page and step.
-2. On the "my skin care" screen, when you click on one of the images describing categories of care products,
-   a section containing the products in that category will open below them. Clicking on another image changes it to
-   products under the new category. At this stage we applied the click only on the cleansers and moisturizers
-   categories, because after connecting to a database all the products will be displayed **according to the user details
-   **, and therefore we will not enter them manually at this stage, but we did want to show the functionality that will
-   be used by the customer in the above object.
 
-## 6. Additional Information
+4. **Implementation of Forms**
 
-- The project's GitHub repository contains all files related to the implementation of the client-side application.
-- Each JavaScript file is dedicated to specific functionalities or screens, promoting clean and organized code
-  structure.
+   Forms, including login and signup forms, are implemented to handle user input. Forms interact with the database for
+   operations like selecting, adding, updating, and deleting information.
+
+
+5. **Translation of HTML Pages into Templates**
+
+   HTML pages are converted into templates to enable dynamic content rendering based on user inputs.
+
+## Order of Operations:
+
+1. **Home Screen:** Users land on the home screen.
+2. **Signup/Login:** Users can register or log in.
+3. **Myskincare Page:** After successful login, users are redirected to the myskincare page.
+
+
+## Screenshots:
+
+- **Home Screen:**
+  ![Home Screen](static/images/home.JPG)
+
+
+- **Signup Page:**
+  ![Signup Page](static/images/signup.JPG)
+
+
+- **Login Page:**
+  ![Login Page](static/images/login.JPG)
+
+
+- **Myskincare Page:**
+  ![Myskincare Page-Top](static/images/myskincare1.JPG)
+  ![Myskincare Page-Bottom](static/images/myskincare2.JPG)
 

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('signup.static', filename='css/signup.css') }}"/>
+{% endblock %}
+    <title>{% block title %}GlowGuide - Sign Up{% endblock %}</title>
+
+{% block page_body_main_content %}
+<h1> Discover </h1>
+<h2> Personalized skin care profile</h2>
+<form>
+    <h2>Your skin care profile </h2>
+    <h3> complete your information</h3>
+    <div class="user-details">
+        <div class="details-item">
+            <label>Email Address</label>
+            <input class="input-bar" type="text" name="emailInput" placeholder="example@example.com" required>
+        </div>
+        <div class="details-item">
+            <label>Phone Number </label>
+            <input class="input-bar" type="text" name="phoneInput" placeholder="05x-xxxxxxx" required>
+        </div>
+        <div class="details-item">
+            <label>First Name</label>
+            <input class="input-bar" type="text" name="firstNameInput" placeholder="Your first name" required>
+        </div>
+        <div class="details-item">
+            <label>Last Name</label>
+            <input class="input-bar" type="text" name="LastNameInput" placeholder="Your last name" required>
+        </div>
+        <div class="details-item">
+            <label>Date Of Birth</label>
+            <input class="input-bar" type="date" name="BirthDateInput" required>
+        </div>
+        <div class="details-item">
+            <label>Skin Type</label>
+            <select class="dropdown" name="SkinType" required>
+                <option value="" disabled selected>Choose Skin Type</option>
+                <option value="Dry">Dry skin</option>
+                <option value="Combination">Combination skin</option>
+                <option value="Oily">Oily skin</option>
+            </select>
+        </div>
+        <div class="details-item">
+            <label>Medications</label>
+            <select class="dropdown" name="topical-medication" onchange="showTopicalMedicationDropdown()">
+                <option value="" disabled selected>Are you taking topical medications?</option>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
+        <div class="details-item" id="topical-medication-dropdown">
+            <label>Medication Name</label>
+            <br>
+            <select class="dropdown" name="medication-name">
+                <option value="" disabled selected>Choose medication</option>
+                <option value="Topical analgesics">Analgesics</option>
+                <option value="Topical steroids">Steroids</option>
+                <option value="Acne treatments">Acne treatments</option>
+            </select>
+        </div>
+    </div>
+    <div class="details-item password-item">
+        <label>Choose Password</label>
+        <input class="input-bar password-input" type="password" name="password" placeholder="Enter your password"
+               required>
+        <label id="confirm-pass"> Confirm Password</label>
+        <input class="input-bar password-input" type="password" name="confirmPassword"
+               placeholder="Confirm your password" required>
+        <div class="details-item password-item">
+            <!-- Use a checkbox to toggle password visibility -->
+            <input type="checkbox" class="toggle-password-checkbox" id="toggle-password">
+            <label for="toggle-password">Show password</label>
+        </div>
+    </div>
+    <div id="continue">
+        <input class="button action-button" type="submit" value="Continue">
+    </div>
+</form>
+{% endblock %}
+
+{% block page_body_js %}
+<script src="{{ url_for('signup.static', filename='js/signup.js') }}"></script>
+<script src="{{ url_for('static', filename='js/password-visibility.js') }}"></script>
+{% endblock %}
+

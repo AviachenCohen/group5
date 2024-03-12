@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('myskincare.static', filename='css/myskincare.css') }}"/>
+{% endblock %}
+<title>{% block title %}GlowGuide - My Skin Care{% endblock %}</title>
+
+{% block page_body_main_content %}
+    <div class="cover-container">
+        <div id="skincare-img-box">
+            <img src="{{ url_for('myskincare.static', filename='images/fullcover.jpeg') }}" alt="serum cover photo">
+        </div>
+        <div class="overlay-left">
+            <span>Featured</span>
+            <span>products</span>
+        </div>
+        <div class="overlay-right">
+            <img src="{{ url_for('myskincare.static', filename='images/halfcover.jpeg') }}"
+                 alt="Women with great skin and glow">
+        </div>
+    </div>
+    <!-- Options for products -->
+    <div class="product-filter">
+        <div class="right-panel">
+            <h2>Review your Customized products</h2>
+        </div>
+    </div>
+    <div class="product-container">
+        <div class="left-panel">
+            <!-- products categories photos with titles -->
+            <div class="product-photo" id="Cleansers">
+                <img src="{{ url_for('myskincare.static', filename='images/cleansers.jpeg') }}"
+                     alt="Women about to cleanse her face">
+                <div class="product-title">Cleansers</div>
+            </div>
+            <div class="product-photo" id="Moisturizers">
+                <img src="{{ url_for('myskincare.static', filename='images/moisturizers.jpeg') }}"
+                     alt="Women about to moisturize">
+                <div class="product-title">Moisturizers</div>
+            </div>
+            <div class="product-photo" id="Serums">
+                <img src="{{ url_for('myskincare.static', filename='images/serums.jpeg') }}"
+                     alt="Women with serum standing in the sun">
+                <div class="product-title">Serums</div>
+            </div>
+            <div class="product-photo" id="Masks">
+                <img src="{{ url_for('myskincare.static', filename='images/masks.jpeg') }}" alt="Face mask">
+                <div class="product-title">Masks</div>
+            </div>
+            <div class="product-photo" id="Acne Solutions">
+                <img src="{{ url_for('myskincare.static', filename='images/acnesolutions.jpeg') }}"
+                     alt="A brush of cream">
+                <div class="product-title">Acne Solutions</div>
+            </div>
+            <div class="product-photo" id="Anti-Aging">
+                <img src="{{ url_for('myskincare.static', filename='images/antiaging.jpeg') }}" alt="Smudge of cream">
+                <div class="product-title">Anti-Aging</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- New container for product details -->
+    <div id="pro-category-con">
+        <div class="accordion">
+            {% for product in products %}
+                <div class="pro-cat" data-category="{{ product.ProductType }}">
+                    <div class="accordion-item">
+                        <div class="accordion-header">{{ product.Name }}</div>
+                        <div class="accordion-content">
+                            <!-- Product details -->
+                            <p>Company: {{ product.Company }}</p>
+                            <p>Skin Type: {{ product.Skin_Type }}</p>
+                            <p>Suitable for Sensitive Skin: {{ product.IsSensitive }}</p>
+                            <p>Vegan: {{ product.IsVegan }}</p>
+                            <p>Purchase Link: <a href="{{ product.Link }}">Buy Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block page_body_js %}
+    <script src="{{ url_for('myskincare.static', filename='js/myskincare.js') }}"></script>
+{% endblock %}
+

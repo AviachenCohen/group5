@@ -1,0 +1,55 @@
+
+/* Sign Up screen design */
+#continue {
+    display: flex;
+    justify-content: end;
+    padding: 10px 190px;
+}
+
+/* Designed form: user-details */
+.user-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.details-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 10px 0px;
+}
+
+.details-item label {
+    font-weight: bold;
+}
+
+.details-item input[type=date],
+.details-item input[type="text"] {
+    width: 80%;
+    color: #666;
+}
+
+.details-item select {
+    font-size: 13px;
+    width: 82.5%;
+}
+
+/* Design for special password element in form */
+.details-item.password-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+}
+
+#confirm-pass {
+    margin-left: 50px;
+}
+
+.password-item label {
+    margin: 10px 10px 10px 10px;
+    white-space: nowrap;
+}
+
+.toggle-password-checkbox {
+    margin-left: 30px;
+}

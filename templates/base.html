@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block page_head_meta %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+    {# CSS #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}"/>
+    {% block page_head_css %}{% endblock %}
+    <!-- Include common fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    {# Title #}
+    <title>{% block title %}GlowGuide{% endblock %}</title>
+</head>
+<body>
+{% include 'header.html' %}
+
+{% block page_body_main_content %}
+{% endblock %}
+
+{# JS #}
+{% block page_body_js %}{% endblock %}
+</body>
+</html>

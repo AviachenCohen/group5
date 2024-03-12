@@ -1,0 +1,131 @@
+body {
+    font-family: 'Poppins';
+}
+
+.site-name {
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.5s ease-in-out; /* animation for site-name*/
+}
+
+.site-name:hover {
+    animation: wave 0.5s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Navigation-bar design for all pages */
+header {
+    background-color: #f8f9fa;
+    padding: 15px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar nav {
+    justify-content: left;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    color: darksalmon;
+}
+
+li a {
+    display: block;
+    color: #333;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Default design for each page title */
+h1 {
+    font-size: xxx-large;
+    text-align: left;
+}
+
+h3 {
+    margin-top: -25px;
+    color: #666;
+}
+
+/* Default button design for site */
+.button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 8px;
+    font-family: Poppins;
+}
+
+/* Default input-bar design for site */
+.input-bar {
+    position: relative;
+    border-radius: 5px;
+    border-color: lightgray;
+    width: 250px;
+    height: 20px;
+    padding: 10px;
+}
+
+/* Default font&color design for every input-bar placeholder in site */
+input::placeholder {
+    font-family: Poppins;
+    color: #666;
+}
+
+/* Default Drop-down bar design for site */
+.dropdown {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-family: Poppins;
+    font-size: 15px;
+    width: 320px;
+    color: #666;
+}
+
+/* Default select design in Drop-down bar for site */
+.dropdown select {
+    margin-top: 5px;
+    float: right;
+    border: none;
+}

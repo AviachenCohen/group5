@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('login.static', filename='css/login.css') }}"/>
+{% endblock %}
+    <title>{% block title %}GlowGuide - Log In{% endblock %}</title>
+
+{% block page_body_main_content %}
+<h1>Log in</h1>
+<h2>Create a personalized skincare routine</h2>
+<form class="log-form" method="POST" action="/login">
+        <div class="log-form-item">
+            <label> Enter your Email address</label>
+            <br>
+            <input class="input-bar" type="text" name="emailInput" placeholder="example@example.com" required>
+        </div>
+        <div class="log-form-item">
+            <label> Enter your password</label>
+            <br>
+            <input class="input-bar" type="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="log-form-item">
+            <input type="checkbox" name="rememberMeCheck">
+            <label> Remember me </label>
+            <input class="button action-button" id="sign-in" type="submit" value="Sign in">
+        </div>
+        <div class="log-form-item">
+            <p> Don't have an account? <a href="{{ url_for('signup.signup_index') }}"> Sign up </a> now! </p>
+        </div>
+</form>
+{% endblock %}
+
+{% block page_body_js %}
+    <script src="{{ url_for('login.static', filename='js/login.js') }}"></script>
+{% endblock %}

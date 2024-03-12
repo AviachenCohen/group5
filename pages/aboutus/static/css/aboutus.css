@@ -1,0 +1,43 @@
+/* About Us screen design */
+.about-us-con {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 30px;
+    border: 1px solid #ccc;
+}
+
+/* Design for each item in About us container besides disclaimer */
+.about-con-item:not(:last-child) {
+    text-align: center;
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+}
+
+/* Remove border from the one before last grid item(third picture) */
+.about-con-item:nth-child(3) {
+    border-right: none;
+}
+
+.step-title {
+    text-align: left;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-left: 30px;
+}
+
+.step-text {
+    margin-top: 5px;
+    text-align: left;
+    font-size: large;
+    color: #666;
+    padding-left: 30px;
+}
+
+/* Design for disclaimer in About us container */
+#disclaimer {
+    grid-column: span 3;
+    text-align: Center;
+    margin-top: 20px;
+    padding: 10px 250px 10px 250px;
+}

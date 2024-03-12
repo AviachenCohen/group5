@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+    {% block page_head_css %}
+        <link rel="stylesheet" href="{{ url_for('aboutus.static', filename='css/aboutus.css') }}"/>
+    {% endblock %}
+    <title>{% block title %}GlowGuide - About Us{% endblock %}</title>
+
+{% block page_body_main_content %}
+    <h1>How it works</h1>
+    <!-- how it works - steps -->
+    <div class="about-us-con">
+        <div class="about-con-item">
+            <img src="{{ url_for('aboutus.static', filename='images/step1.png') }}"
+                 alt="Step 1- Women is confused trying to choose a skin care product">
+            <div class="step-title"> Step 1</div>
+            <div class="step-text"> Create your account. Sign up and tell us about your skin type and concerns.</div>
+        </div>
+        <div class="about-con-item">
+            <img src="{{ url_for('aboutus.static', filename='images/step2.png') }}"
+                 alt="Step 2 - Women typing in computer">
+            <div class="step-title"> Step 2</div>
+            <div class="step-text"> Get your personalized routine. Our algorithm will recommend the best products for
+                your
+                skin.
+            </div>
+        </div>
+        <div class="about-con-item">
+            <img src="{{ url_for('aboutus.static', filename='images/step3.png') }}"
+                 alt="Step 3 - Women getting chosen product from website">
+            <div class="step-title"> Step 3</div>
+            <div class="step-text"> Enter your routine. Add the products you use and track your progress.</div>
+        </div>
+        <div id="disclaimer"> GlowGuide is an informational platform designed to provide general skincare advice and
+            recommendations.
+            The information on this website is not intended to be a substitute for professional medical advice,
+            diagnosis,
+            or treatment.
+            Always seek the advice of your physician or other qualified health provider with any questions you may have
+            regarding a medical condition.
+        </div>
+    </div>
+{% endblock %}
+

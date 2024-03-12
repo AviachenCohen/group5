@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block page_head_css %}
+    <link rel="stylesheet" href="{{ url_for('account.static', filename='css/account.css') }}"/>
+{% endblock %}>
+<title>{% block title %}GlowGuide - Account{% endblock %}</title>
+{% block page_body_main_content %}
+    <h1>Account History & Settings</h1>
+    <div class="account-con">
+        <section id="search-history">
+            <h2>Search History</h2>
+            <ul id="history-list">
+                <!-- Search history will be dynamically added here -->
+            </ul>
+            <p id="empty-search-message">You haven't searched anything yet.</p>
+            <img src="{{ url_for('account.static', filename='images/NoResult.png') }}" alt="No searches">
+        </section>
+        <section id="profile-info">
+            <h2>Update Profile Information</h2>
+            <form class="update-info">
+                <div class="details-item">
+                    <label for="email">Email:</label>
+                    <input class="input-bar" type="email" id="email" name="emailInput" placeholder="example@example.com"
+                           required>
+                </div>
+                <div class="details-item">
+                    <label for="update-skin-type">Skin Type:</label>
+                    <select class="dropdown" id="update-skin-type" name="skinType">
+                        <option value="" disabled selected>Choose Skin Type</option>
+                        <option value="dry">Dry skin</option>
+                        <option value="combination"> Combination skin</option>
+                        <option value="oily">Oily skin</option>
+                    </select>
+                </div>
+                <div class="details-item">
+                    <label for="password">New Password:</label>
+                    <input class="input-bar password-input" type="password" id="password" name="password" required>
+                </div>
+                <div class="details-item">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input class="input-bar password-input" type="password" id="confirm-password"
+                           name="confirm-password"
+                           required>
+                </div>
+                <div class="details-item password-item">
+                    <input type="checkbox" class="toggle-password-checkbox" id="toggle-password2">
+                    <label for="toggle-password2">Show password</label>
+                </div>
+                <button class="button" type="submit" value="Save Changes">Save Changes</button>
+            </form>
+        </section>
+    </div>
+{% endblock %}
+{% block page_body_js %}
+    <script src="{{ url_for('account.static', filename='js/account-form-validations.js') }}"></script>
+    <script src="{{ url_for('account.static', filename='js/account.js') }}"></script>
+{% endblock %}
+

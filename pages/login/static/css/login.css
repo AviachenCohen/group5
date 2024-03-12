@@ -1,0 +1,13 @@
+
+/* Log In screen design */
+.log-form-item {
+    margin: 20px 0px 20px 0px;
+}
+
+.log-form .form-group:nth-child(-n+2) label {
+    display: block;
+}
+
+.log-form .button {
+    margin: 10px 50px;
+}

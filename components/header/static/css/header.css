@@ -1,0 +1,24 @@
+/* Navigation-bar design for all pages */
+header {
+    background-color: #f8f9fa;
+    padding: 15px;
+}
+
+#nav-button {
+    margin-left: 1300px;
+}
+
+/* Media query for smaller screens, such as laptops */
+@media screen and (max-width: 2000px) {
+    .navbar nav ul {
+        margin-right: 20px;
+    }
+
+    #nav-button {
+        margin-left: auto;
+    }
+}
+
+.button {
+    text-decoration: none; /* Remove underline */
+}

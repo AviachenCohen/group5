@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="{{ url_for('header.static', filename='css/header.css') }}"/>
+
+<header>
+    <div class="navbar">
+        <div class="site-name">GlowGuide</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home.home_index') }}">Home</a></li>
+                <li><a href="{{ url_for('aboutus.aboutus_index') }}">About Us</a></li>
+                {% if 'email' in session %}
+                    <li><a href="{{ url_for('account.account_index') }}">Account</a></li>
+                    <li><a href="{{ url_for('myskincare.myskincare_index') }}">My Skin Care</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <div id="nav-button">
+            {% if 'email' in session %}
+                <a href="/logout" class="button action-button">Log out</a>
+            {% else %}
+                <a href="/login" class="button action-button">Log in</a>
+                <a href="/signup" class="button action-button">Sign up</a>
+            {% endif %}
+        </div>
+    </div>
+</header>
+
+<script src="{{ url_for('header.static', filename='js/buttons.js') }}"></script>

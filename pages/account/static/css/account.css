@@ -1,0 +1,73 @@
+
+
+/* Account screen design */
+.account-con {
+    display: flex;
+}
+
+#profile-info {
+    flex: 1;
+    padding: 20px;
+}
+
+#search-history {
+    width: 70%;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#update-skin-type {
+    width: 270px;
+}
+
+#toggle-password2 {
+    margin-left: 0px;
+}
+
+
+.details-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 10px 0px;
+}
+
+.details-item label {
+    font-weight: bold;
+}
+
+.details-item input[type=date],
+.details-item input[type="text"] {
+    width: 80%;
+    color: #666;
+}
+
+.details-item select {
+    font-size: 13px;
+    width: 82.5%;
+}
+
+/* Design for special password element in form */
+.details-item.password-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+}
+
+#confirm-pass {
+    margin-left: 50px;
+}
+
+.password-item label {
+    margin: 10px 10px 10px 10px;
+    white-space: nowrap;
+}
+
+.toggle-password-checkbox {
+    margin-left: 30px;
+}
