@@ -50,18 +50,18 @@ relevant products.
 ## Screenshots:
 
 - **Home Screen:**
-  ![Home Screen](static/images/home.JPG)
+  ![Home Screen](static/Images/Screenshots/home.JPG)
 
 
 - **Signup Page:**
-  ![Signup Page](static/images/signup.JPG)
+  ![Signup Page](static/Images/Screenshots/signup.JPG)
 
 
 - **Login Page:**
-  ![Login Page](static/images/login.JPG)
+  ![Login Page](static/Images/Screenshots/login.JPG)
 
 
 - **Myskincare Page:**
-  ![Myskincare Page-Top](static/images/myskincare1.JPG)
-  ![Myskincare Page-Bottom](static/images/myskincare2.JPG)
+  ![Myskincare Page-Top](static/Images/Screenshots/myskincare1.JPG)
+  ![Myskincare Page-Bottom](static/Images/Screenshots/myskincare2.JPG)
 
