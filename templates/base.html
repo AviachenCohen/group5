@@ -10,6 +10,8 @@
     {% block page_head_css %}{% endblock %}
     <!-- Include common fonts -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    {# favicon #}
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon/favicon.ico') }}"/>
     {# Title #}
     <title>{% block title %}GlowGuide{% endblock %}</title>
 </head>
