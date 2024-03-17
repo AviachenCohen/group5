@@ -26,14 +26,14 @@ relevant products.
 
 3. **Connection to Database and SQL Queries**
 
-   The project uses a MongoDB database named "mydatabase" with collections for customers and products. SQL queries are
+   The project uses a MongoDB database named "mydatabase" with collections for customers and products. Queries are
    executed for screens such as myskincare, login, and signup.
 
 
 4. **Implementation of Forms**
 
    Forms, including login and signup forms, are implemented to handle user input. Forms interact with the database for
-   operations like selecting, adding, updating, and deleting information.
+   operations like selecting and adding information.
 
 
 5. **Translation of HTML Pages into Templates**
