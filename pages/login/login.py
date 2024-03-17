@@ -30,7 +30,9 @@ def login_index():
             return jsonify(success=True)  # Return a JSON response indicating success
         else:
             return jsonify(success=False,
-                           error='Invalid email or password. Please try again.')
+                           error="Oops! It seems like there's no account associated with the email you provided, "
+                                 "or your password is wrong. "
+                                 "Please double-check your email or consider signing up if you're new here.")
             # Return a JSON response indicating failure and the error message
 
     # Render the login page template
