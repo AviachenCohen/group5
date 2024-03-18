@@ -26,6 +26,15 @@
         height: 150px;
         border-radius: 8px;
     }
+
+    .pro-cat {
+        width: 85%;
+    }
+
+    /* Accordion headers design*/
+    .accordion-header {
+        font-size: 13px;
+    }
 }
 
 /* My Skin Care screen design */
@@ -101,20 +110,20 @@
 
 /* Apply the animation to the h2 element */
 h2 {
-  animation: attention 2s infinite alternate;
+    animation: attention 2s infinite alternate;
 }
 
 /* Define the animation */
 @keyframes attention {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 
@@ -159,7 +168,7 @@ h2 {
 }
 
 #pro-category-con {
-    border: 2px solid #ccc;
+    /*border: 2px solid #ccc;*/
     border-radius: 8px;
     width: 92%;
     margin: 0 auto;
@@ -180,7 +189,7 @@ h2 {
         border-color: deeppink;
         box-shadow: 0 0 40px deeppink;
     }
-     100% {
+    100% {
         border-color: lightpink;
         box-shadow: 0 0 40px lightpink;
     }
@@ -197,7 +206,7 @@ h2 {
 
 /* Accordion items design */
 .accordion-item {
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
     flex-basis: calc(33.33% - 1px);
     display: flex;
     flex-direction: column;

@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, jsonify
-from db_connector import customers_col
+from db_connector import *
 
 # home blueprint definition
 signup = Blueprint(
@@ -28,7 +28,7 @@ def signup_index():
         medication_name = data.get('medication-name')
 
         # Check if the email already exists in the database
-        existing_user = customers_col.find_one({'Mail address': email})
+        existing_user = check_if_user_exist(email)
         if existing_user:
             return jsonify(success=False, error='Email already exists')
 
@@ -44,11 +44,8 @@ def signup_index():
             "Topical Medication": topical_medication,
             "Medication Name": medication_name
         }
-        customers_col.insert_one(new_user)
-
+        insert_a_customer(new_user)
         return jsonify(success=True)
     else:
         # If it's a GET request, just render the signup form
         return render_template('signup.html')
-
-

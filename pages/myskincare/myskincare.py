@@ -1,6 +1,6 @@
 # Import necessary modules
 from flask import Blueprint, render_template, session
-from db_connector import products_col
+from db_connector import *
 
 # home blueprint definition
 myskincare = Blueprint(
@@ -26,6 +26,6 @@ def myskincare_index():
     }
 
     # Query MongoDB to fetch products based on the defined query
-    products = products_col.find(query)
+    products = get_list_of_products(query)
 
     return render_template('myskincare.html', products=products)

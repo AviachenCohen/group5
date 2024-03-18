@@ -25,19 +25,20 @@ mydatabase = cluster['mydatabase']
 customers_col = mydatabase['customers']
 products_col = mydatabase['products']
 
+
 # create all necessary functions
-def get_list_of_customers():
-    return list(customers_col.find())
+def find_user(email, password):
+    return customers_col.find_one({'Mail address': email, 'Password': password})
 
 
-def insert_customers(customers):
-    customers_col.insert_many(customers)
+def check_if_user_exist(email):
+    return customers_col.find_one({'Mail address': email})
 
 
-def insert_products(products):
-    products_col.insert_many(products)
+def insert_a_customer(customers):
+    customers_col.insert_one(customers)
 
 
-def get_list_of_products():
-    return list(products_col.find())
+def get_list_of_products(query):
+    return list(products_col.find(query))
 
