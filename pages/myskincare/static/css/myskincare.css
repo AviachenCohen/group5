@@ -200,13 +200,12 @@ h2 {
 .accordion {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
 
 /* Accordion items design */
 .accordion-item {
-    /*border: 1px solid #ccc;*/
     flex-basis: calc(33.33% - 1px);
     display: flex;
     flex-direction: column;

@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Add click event listener to accordion headers to toggle accordion content
     const accordionHeaders = document.querySelectorAll(".accordion-header");
-
     accordionHeaders.forEach(header => {
         header.addEventListener("click", function () {
             // Toggle active class on accordion item
@@ -53,15 +52,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Prevent the category container from hiding when clicking inside it
-    categoryContainer.addEventListener('click', function (event) {
-        event.stopPropagation();
-    });
+    // // Prevent the category container from hiding when clicking inside it
+    // categoryContainer.addEventListener('click', function (event) {
+    //     event.stopPropagation();
+    // });
 
-    // Prevent accordion items from hiding when clicking inside them
-    categoryContainer.querySelectorAll('.accordion-item').forEach(function (item) {
-        item.addEventListener('click', function (event) {
-            event.stopPropagation();
-        });
-    });
+    // // Prevent accordion items from hiding when clicking inside them
+    // categoryContainer.querySelectorAll('.accordion-item').forEach(function (item) {
+    //     item.addEventListener('click', function (event) {
+    //         event.stopPropagation();
+    //     });
+    // });
 });
