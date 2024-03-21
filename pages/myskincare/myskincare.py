@@ -1,6 +1,8 @@
 # Import necessary modules
 from flask import Blueprint, render_template, session
 from db_connector import *
+from app import login_required
+
 
 # home blueprint definition
 myskincare = Blueprint(
@@ -14,6 +16,7 @@ myskincare = Blueprint(
 
 # Routes
 @myskincare.route('/myskincare')
+@login_required
 def myskincare_index():
     user_skin_type = session.get('Skin Type')  # Retrieve user's skin type from session
 

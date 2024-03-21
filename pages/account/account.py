@@ -1,4 +1,6 @@
 from flask import Blueprint, render_template
+from app import login_required
+
 
 # home blueprint definition
 account = Blueprint(
@@ -12,5 +14,6 @@ account = Blueprint(
 
 # Routes
 @account.route('/account')
+@login_required
 def account_index():
     return render_template('account.html')

@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Retrieve email and password values from localStorage if available
+    const storedEmail = localStorage.getItem('rememberedEmail');
+    const storedPassword = localStorage.getItem('rememberedPassword');
+
+    // Set the email and password values in their respective input boxes
+    document.querySelector('input[name="emailInput"]').value = storedEmail || '';
+    document.querySelector('input[name="password"]').value = storedPassword || '';
+
+    // Retrieve rememberMe checkbox state from localStorage if available
+    const rememberMeState = localStorage.getItem('rememberMeState');
+    const rememberMeCheck = document.getElementById("rememberMeCheck");
+
+    // Set the checkbox state
+    rememberMeCheck.checked = rememberMeState === 'checked';
+
     // Function to handle form submission
     function handleFormSubmit(event) {
         event.preventDefault(); // Prevent the default form submission
@@ -12,6 +27,19 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!emailRegex.test(email)) {
             alert("Please enter a valid email address.");
             return; // Stop form submission if validation fails
+        }
+
+        // If "Remember me" checkbox is checked, store email and password in localStorage
+        const rememberMeCheck = document.getElementById("rememberMeCheck");
+        if (rememberMeCheck.checked) {
+            localStorage.setItem('rememberedEmail', email);
+            localStorage.setItem('rememberedPassword', password);
+            localStorage.setItem('rememberMeState', 'checked');
+        } else {
+            // If "Remember me" checkbox is unchecked, clear stored email and password
+            localStorage.removeItem('rememberedEmail');
+            localStorage.removeItem('rememberedPassword');
+            localStorage.removeItem('rememberMeState');
         }
 
         // If all validations pass, submit the form

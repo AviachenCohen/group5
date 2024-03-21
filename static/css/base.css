@@ -154,3 +154,17 @@ input::placeholder {
     float: right;
     border: none;
 }
+
+#e-msg {
+    text-align: center;
+    font-size: xx-large;
+    background-color: black;
+    color: crimson;
+    animation: hideMessage 6s forwards;
+}
+
+@keyframes hideMessage {
+            to {
+                opacity: 0;
+            }
+        }

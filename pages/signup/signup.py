@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, jsonify
 from db_connector import *
+from app import logout_required
 
 # home blueprint definition
 signup = Blueprint(
@@ -13,6 +14,7 @@ signup = Blueprint(
 
 # Routes
 @signup.route('/signup', methods=['GET', 'POST'])
+@logout_required
 def signup_index():
     if request.method == 'POST':
         # Process the form data and sign up the user
